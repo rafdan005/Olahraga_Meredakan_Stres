@@ -36,7 +36,7 @@ if(isset($_SESSION['username'])){
                     <div class="card-body">
                         <div class="text-center mb-3">
                             <i class="bi bi-person-circle h1 display-4"></i>
-                            <p>Olahraga Meredakan Stres</p>
+                            <p>Welcome To Olahraga Meredakan Stres</p>
                             <hr />
                         </div>
                         <form action="" method="post" id="loginForm">
