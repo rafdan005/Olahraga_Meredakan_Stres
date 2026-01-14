@@ -8,6 +8,11 @@ $jumlah_article = $hasil1->num_rows;
 $sql2 = "SELECT * FROM gallery";
 $hasil2 = $conn->query($sql2);
 $jumlah_gallery = $hasil2->num_rows;
+
+// Ambil data user dari database (termasuk foto)
+$username = $_SESSION['username'];
+$user = $conn->query("SELECT * FROM user WHERE username='$username'")->fetch_assoc();
+$foto_user = $user['foto'] ?? null;
 ?>
 
 <div class="text-center mb-4">
@@ -16,8 +21,8 @@ $jumlah_gallery = $hasil2->num_rows;
         <?= htmlspecialchars($_SESSION['username']); ?>
     </h3>
 
-    <?php if (!empty($_SESSION['foto'])) : ?>
-        <img src="<?= $_SESSION['foto']; ?>" 
+    <?php if (!empty($foto_user)) : ?>
+        <img src="<?= htmlspecialchars($foto_user); ?>" 
              class="rounded-circle mt-3"
              width="150"
              height="150"

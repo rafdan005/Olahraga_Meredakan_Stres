@@ -167,7 +167,7 @@ include "koneksi.php";
             ?>
             <div class="carousel-item active">
               <img
-                src="img/RENDANG.jpg"
+                src="img/"
                 class="d-block w-100"
                 alt="Rendang Padang"
               />
