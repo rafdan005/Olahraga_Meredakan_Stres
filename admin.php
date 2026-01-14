@@ -16,7 +16,7 @@ if (!isset($_SESSION['username'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Olahraga Meredakan Stres</title>
-    <link rel="icon" href="img/Logo.jpg" type="image/x-icon">
+    <link rel="icon" href="img/Logo.jpg">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -55,14 +55,31 @@ if (!isset($_SESSION['username'])) {
             <li class="nav-item">
                 <a class="nav-link" href="admin.php?page=article">Article</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="admin.php?page=gallery">Gallery</a>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-danger fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <?= $_SESSION['username']?>
                 </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="logout.php">Logout</a></li> 
-                </ul>
-            </li> 
+                <ul class="dropdown-menu dropdown-menu-end">
+
+            <!-- PROFILE -->
+            <li>
+              <a class="dropdown-item" href="admin.php?page=profile">
+                <i class="bi bi-person me-1"></i> Profile
+              </a>
+            </li>
+
+            <li><hr class="dropdown-divider"></li>
+
+            <!-- LOGOUT -->
+            <li>
+              <a class="dropdown-item text-danger" href="logout.php">
+                <i class="bi bi-box-arrow-right me-1"></i> Logout
+              </a>
+            </li>
+
+          </ul>
         </ul>
         </div>
     </div>
@@ -89,7 +106,7 @@ if (!isset($_SESSION['username'])) {
 			<div>
 				<a href="https://www.instagram.com/udinusofficial"><i class="bi bi-instagram h2 p-2 text-dark"></i></a>
 				<a href="https://twitter.com/udinusofficial"><i class="bi bi-twitter h2 p-2 text-dark"></i></a>
-				<a href="https://wa.me/+6282111794900"><i class="bi bi-whatsapp h2 p-2 text-dark"></i></a>
+				<a href="https://wa.me/+6288227789219"><i class="bi bi-whatsapp h2 p-2 text-dark"></i></a>
 			</div>
 			<div>Rafy Wildan Falevi &copy; 2025</div>
     </footer>
